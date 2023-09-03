@@ -1,0 +1,91 @@
+<!DOCTYPE html>\
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content= "IE-edge">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Yasiru's Portfolio</title>
+        <link rel="stylesheet" href="Style.css">
+
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo.png" class="logo">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Me</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Web devoloper</p>
+                    <h1>Hi ,I'm <span>Yasiru Jayamadu</span><br> From Sri Lanka </h1>
+                </div>
+            </div>
+
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/user.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub">About Me</h1>
+                        <P>A hard working, professional Undergraduate who wants to work in the software industry. I am highly motivated to succeed in my career and have advanced technical skills. I really think that with good teamwork and Good communication everything can be solved. I am looking for a role in the industry that allows for career progression and allows me to use my skills to increase the productivity and profitability of the Company.</P>
+                        <div class="tab-tittle">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                            
+                        </div>
+                        <div class="tab-contain active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>create Web Applications</li>
+                                <li><span>App Development</span><br>create Android Applications</li>
+                                <li><span>Technical Skills</span><br>Java,Kotlin,Python,JavaScript,SQL,PHP,HTML,CSS,React</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab-contain" id="education">
+                            <ul>
+                                <li><span>BSc (Hons) Computer Science</span><br>Informatics Institute of Technology | 2021-present</li>
+                                <li><span>G.C.E Advanced Level</span><br>Richmond College Galle | 2020 <br>Physical Science Stream<br>C3</li>
+                                <li><span>G.C.E Ordinary Level</span><br>Richmond College Galle | 2017 <br>A8,C1</li>
+                                
+                            </ul>
+                        </div>
+                    </div> 
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links")
+            var tabcontain = document.getElementsByClassName("tab-contain")
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+
+                }
+                for(tabcontains of tabcontain){
+                    tabcontains.classList.remove("active-tab");
+
+                }
+                event.currentTarget.classList.add("active-link")
+                document.getElementById(tabname).classList.add("active-tab")
+
+
+            }
+
+
+
+
+        </script>
+    </body>
+</html> 
